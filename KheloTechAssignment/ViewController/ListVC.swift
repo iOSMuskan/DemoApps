@@ -68,10 +68,6 @@ class ListVC: UIViewController,UITableViewDataSource, UITableViewDelegate, UISea
           searchBar.resignFirstResponder()
       }
 private func fetchSportsFromAPI() {
-//      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//      let context = appDelegate.persistentContainer.viewContext
-//
-
       let networkService = NetworkService()
       networkService.fetchSports(context: context) { [weak self] result in
           switch result {
